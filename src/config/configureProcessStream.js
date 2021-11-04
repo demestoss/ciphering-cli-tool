@@ -1,7 +1,7 @@
 const configureProcessStream = () => {
   process.on("exit", (code) => {
     if (code) {
-      console.log(`\nProgram stopped with code: ${code}`);
+      console.log(`\n\nProgram stopped with code: ${code}`);
     }
   });
 };

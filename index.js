@@ -1,4 +1,5 @@
 const configureProcessStream = require("./src/config/configureProcessStream");
+const createCipheringCli = require("./src/cli/createCipheringCli");
 const {
   caesarCipherEncoder,
   caesarCipherDecoder,
@@ -21,3 +22,7 @@ const arr = [
 ];
 
 console.log(arr);
+
+const cipheringCli = createCipheringCli();
+cipheringCli.parse(process.argv);
+console.log(cipheringCli.opts());
