@@ -1,9 +1,9 @@
-const validateConfig = require("./cipheringConfig/validateConfig");
+const validateConfig = require("../cipheringConfig/validateConfig");
 const {
   isFileExists,
   isFileWritable,
   isFileReadable,
-} = require("../../validators");
+} = require("../../../validators");
 
 const notExistsOrTruthyCase = (func) => (value) =>
   !value || func(value);

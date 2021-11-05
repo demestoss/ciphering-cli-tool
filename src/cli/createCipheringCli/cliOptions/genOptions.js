@@ -1,4 +1,4 @@
-const createOption = require("../../program/options/createOption");
+const createOption = require("../../../program/options/createOption");
 const {
   inputOptionValidators,
   outputOptionValidators,

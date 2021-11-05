@@ -11,11 +11,11 @@ const {
 } = require("./constants");
 
 const ciphersMap = {
-  [CA.CAESAR + CM.ENCODE]: caesarCipherEncoder,
-  [CA.CAESAR + CM.DECODE]: caesarCipherDecoder,
-  [CA.ROT8 + CM.ENCODE]: rot8CipherEncoder,
-  [CA.ROT8 + CM.DECODE]: rot8CipherDecoder,
-  [CA.ATBASH]: atbashCipher,
+  [CA.CAESAR.name + CM.ENCODE]: caesarCipherEncoder,
+  [CA.CAESAR.name + CM.DECODE]: caesarCipherDecoder,
+  [CA.ROT8.name + CM.ENCODE]: rot8CipherEncoder,
+  [CA.ROT8.name + CM.DECODE]: rot8CipherDecoder,
+  [CA.ATBASH.name]: atbashCipher,
 };
 
 module.exports = ciphersMap;

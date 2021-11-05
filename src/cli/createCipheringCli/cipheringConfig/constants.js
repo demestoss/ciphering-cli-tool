@@ -1,7 +1,14 @@
 const CipheringAlgorithms = Object.freeze({
-  CAESAR: "C",
-  ROT8: "R",
-  ATBASH: "A",
+  CAESAR: {
+    name: "C",
+  },
+  ROT8: {
+    name: "R",
+  },
+  ATBASH: {
+    name: "A",
+    mono: true,
+  },
 });
 
 const CipheringMode = Object.freeze({
