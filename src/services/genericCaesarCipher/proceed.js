@@ -3,12 +3,8 @@ const { isUpperCased } = require("../../utils/stringUtils");
 const isAlphabeticLetter = (alphabet, letter) =>
   alphabet.includes(letter.toLowerCase());
 
-const proceed = ({
-  string,
-  alphabet,
-  getShiftedLetter,
-}) => {
-  return string
+const proceed = ({ string, alphabet, getShiftedLetter }) =>
+  string
     .split("")
     .map((letter) => {
       if (!isAlphabeticLetter(alphabet, letter)) {
@@ -24,6 +20,5 @@ const proceed = ({
         : shiftedLetter;
     })
     .join("");
-};
 
 module.exports = proceed;

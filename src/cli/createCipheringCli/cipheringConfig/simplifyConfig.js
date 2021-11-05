@@ -1,6 +1,6 @@
 const { CipheringAlgorithms: CA } = require("./constants");
 
-const getSameAlgorithm = (current, next) =>
+const isSameAlgorithm = (current, next) =>
   Object.values(CA).find(
     (algorithm) =>
       current.includes(algorithm.name) &&
@@ -11,7 +11,7 @@ const isAlgorithmFlagDifferent = (current, next) =>
   current.at(-1) !== next.at(-1);
 
 const isKillEachOther = (current, next) => {
-  const algorithm = getSameAlgorithm(current, next);
+  const algorithm = isSameAlgorithm(current, next);
   if (!algorithm) return false;
   if (algorithm.mono) return true;
   return isAlgorithmFlagDifferent(current, next);
