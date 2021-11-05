@@ -2,6 +2,7 @@ const parseProgramParams = require("./helpers/parseProgramParams");
 const parseCliArgv = require("./helpers/parseCliArgv");
 const validateOptions = require("./helpers/validateOptions");
 const specialOptionsValidation = require("./helpers/specialOptionsValidation");
+const getOptionsWithoutSpecial = require("./helpers/getOptionsWithoutSpecial");
 
 const createProgram = (params) => {
   const state = parseProgramParams(params);
@@ -24,7 +25,14 @@ const createProgram = (params) => {
 
   const parse = (argv) => {
     specialOptionsValidation(argv, state);
-    state.cliOptions = parseCliArgv(argv, state.options);
+    state.cliOptions = parseCliArgv(
+      argv,
+      optionsWithoutSpecial()
+    );
+  };
+
+  const optionsWithoutSpecial = () => {
+    return getOptionsWithoutSpecial(state.options);
   };
 
   const addOption = (option) => {

@@ -1,5 +1,5 @@
 const validateOptions = require("./validateOptions");
-const defaultOptions = require("../options/defaulOptions");
+const specialOptions = require("../options/specialOptions");
 const { DEFAULT_VERSION } = require("../config/constants");
 const {
   tryCatch,
@@ -24,7 +24,7 @@ const parseProgramParams = (params) => {
     description,
     version,
     options: [
-      ...defaultOptions(),
+      ...specialOptions(),
       ...validateOptions(options),
     ],
   };
