@@ -2,9 +2,9 @@
   "name": "ciphering-cli-tool",
   "version": "1.0.0",
   "description": "CLI tool for ciphering the data",
-  "main": "index.js",
+  "main": "my_ciphering_cli.js",
   "scripts": {
-    "dev": "node index"
+    "dev": "node my_ciphering_cli"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,6 @@
     "url": "https://github.com/popovdmitriiy/ciphering-cli-tool/issues"
   },
   "homepage": "https://github.com/popovdmitriiy/ciphering-cli-tool#readme",
-  "bin": {
-    "cipher-cli": "index.js"
-  },
   "devDependencies": {
     "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
