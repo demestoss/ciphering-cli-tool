@@ -14,11 +14,15 @@ const createOption = (params) => {
   };
 
   const flags = () => {
-    return [state.long, state.short];
+    return [state.short, state.long];
   };
 
   const name = () => {
     return state.optionName;
+  };
+
+  const description = () => {
+    return state.description;
   };
 
   const defaultValue = (value) => {
@@ -34,8 +38,12 @@ const createOption = (params) => {
     flags,
     defaultValue,
     validate,
+    description,
     get isOptional() {
       return state.isOptional;
+    },
+    get withoutValue() {
+      return state.withoutValue;
     },
   };
 };

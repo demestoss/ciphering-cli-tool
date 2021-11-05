@@ -4,19 +4,45 @@ const {
   throwError,
 } = require("../../utils/errorUtils");
 
-const parseName = (name) => {
-  const [short, long, optionName] = name.split(" ");
+const genOptionName = (long, optionName) => {
+  if (!optionName) {
+    return {
+      name: long.replaceAll("-", ""),
+      withoutValue: true,
+    };
+  }
 
-  if (!short || !long || !optionName) {
+  if (optionName[0] !== "<" || optionName.at(-1) !== ">") {
     throwError(
-      "Option's name should have '-short --long optionName' structure"
+      "Option's name should have '<optionName>' format"
     );
   }
 
   return {
+    name: optionName.replace("<", "").replace(">", ""),
+    withoutValue: false,
+  };
+};
+
+const parseName = (name) => {
+  const [short, long, optionName] = name.split(" ");
+
+  if (!short || !long) {
+    throwError(
+      "Option's name should have '-short --long' flags specified"
+    );
+  }
+
+  const { name: newName, withoutValue } = genOptionName(
+    long,
+    optionName
+  );
+
+  return {
     short,
     long,
-    optionName,
+    optionName: newName,
+    withoutValue,
   };
 };
 

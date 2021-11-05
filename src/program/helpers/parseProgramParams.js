@@ -1,4 +1,6 @@
 const validateOptions = require("./validateOptions");
+const defaultOptions = require("../options/defaulOptions");
+const { DEFAULT_VERSION } = require("../config/constants");
 const {
   tryCatch,
   processExitErrorHandler,
@@ -6,7 +8,12 @@ const {
 } = require("../../utils/errorUtils");
 
 const parseProgramParams = (params) => {
-  const { name, description = "", options = [] } = params;
+  const {
+    name,
+    description = "",
+    version = DEFAULT_VERSION,
+    options = [],
+  } = params;
 
   if (!name) {
     throwError("Please specify program name");
@@ -15,7 +22,11 @@ const parseProgramParams = (params) => {
   return {
     name,
     description,
-    options: validateOptions(options),
+    version,
+    options: [
+      ...defaultOptions(),
+      ...validateOptions(options),
+    ],
   };
 };
 
