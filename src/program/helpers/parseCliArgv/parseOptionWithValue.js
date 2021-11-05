@@ -26,7 +26,7 @@ const parseOptionWithValue = (
   const optionValue = getFindedValue(argv, findedOption);
   validateOptionValue(option, optionValue);
 
-  acc[option.name()] = optionValue;
+  acc[option.name] = optionValue;
   return acc;
 };
 

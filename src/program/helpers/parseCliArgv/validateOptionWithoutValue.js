@@ -6,7 +6,7 @@ const validateOptionWithoutValue = (
 ) => {
   if (findedCliOption.length > 1) {
     throwError(
-      `Option '${option.name()}' repeated more then one time`
+      `Option '${option.name}' repeated more then one time`
     );
   }
 };

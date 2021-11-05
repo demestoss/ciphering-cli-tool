@@ -17,14 +17,6 @@ const createOption = (params) => {
     return [state.short, state.long];
   };
 
-  const name = () => {
-    return state.optionName;
-  };
-
-  const description = () => {
-    return state.description;
-  };
-
   const defaultValue = (value) => {
     if (value) {
       state.defaultValue = value;
@@ -34,17 +26,21 @@ const createOption = (params) => {
   };
 
   return {
-    name,
-    flags,
-    defaultValue,
-    validate,
-    description,
+    get name() {
+      return state.name;
+    },
+    get description() {
+      return state.description;
+    },
     get isOptional() {
       return state.isOptional;
     },
     get withoutValue() {
       return state.withoutValue;
     },
+    flags,
+    defaultValue,
+    validate,
   };
 };
 

@@ -5,12 +5,12 @@ const validateOptionWithValue = (
   option
 ) => {
   if (findedCliOption.length === 0 && !option.isOptional) {
-    throwError(`Missed required option '${option.name()}'`);
+    throwError(`Missed required option '${option.name}'`);
   }
 
   if (findedCliOption.length > 1) {
     throwError(
-      `Option '${option.name()}' repeated more then one time`
+      `Option '${option.name}' repeated more then one time`
     );
   }
 };

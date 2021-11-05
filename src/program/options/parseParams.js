@@ -41,7 +41,7 @@ const parseName = (name) => {
   return {
     short,
     long,
-    optionName: newName,
+    name: newName,
     withoutValue,
   };
 };

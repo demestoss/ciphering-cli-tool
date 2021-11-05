@@ -17,7 +17,7 @@ const validateOptions = (options) => {
     throwError("Option's flags have duplicates");
   }
 
-  const allNames = options.map((option) => option.name());
+  const allNames = options.map((option) => option.name);
   if (hasDuplicates(allNames)) {
     throwError("Option's names have duplicates");
   }
