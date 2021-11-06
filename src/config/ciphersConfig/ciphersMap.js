@@ -4,7 +4,7 @@ const {
   rot8CipherEncoder,
   rot8CipherDecoder,
   atbashCipher,
-} = require("../../../services/ciphers");
+} = require("../../services/ciphers");
 const {
   CipheringAlgorithms: CA,
   CipheringMode: CM,

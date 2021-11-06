@@ -1,4 +1,6 @@
-const { CipheringAlgorithms: CA } = require("./constants");
+const {
+  CipheringAlgorithms: CA,
+} = require("../../../config/ciphersConfig/constants");
 
 const isSameAlgorithm = (current, next) =>
   Object.values(CA).find(

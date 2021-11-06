@@ -1,4 +1,4 @@
-const validateConfig = require("../cipheringConfig/validateConfig");
+const validateConfig = require("./validateConfig");
 const {
   isFileExists,
   isFileWritable,
@@ -34,9 +34,9 @@ const outputOptionValidators = () => [
   },
 ];
 
-const configOptionValidators = () => [
+const configOptionValidators = (ciphersMap) => [
   {
-    callback: validateConfig,
+    callback: validateConfig(ciphersMap),
     error: "Cipher config is invalid",
   },
 ];

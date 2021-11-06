@@ -1,4 +1,6 @@
-const { isUpperCased } = require("../../utils/stringUtils");
+const {
+  isUpperCased,
+} = require("../../../utils/stringUtils");
 
 const isAlphabeticLetter = (alphabet, letter) =>
   alphabet.includes(letter.toLowerCase());
