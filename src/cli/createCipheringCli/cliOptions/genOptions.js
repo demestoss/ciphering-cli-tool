@@ -5,7 +5,7 @@ const {
   configOptionValidators,
 } = require("./genValidators");
 
-const genOptions = (ciphersMap) => [
+const genOptions = () => [
   createOption({
     name: "-i --input <input>",
     description: "A path to input file",
@@ -22,7 +22,7 @@ const genOptions = (ciphersMap) => [
     name: "-c --config <config>",
     description:
       "Config for ciphers. Config is a string with pattern {XY(-)}n",
-    validators: configOptionValidators(ciphersMap),
+    validators: configOptionValidators(),
   }),
 ];
 

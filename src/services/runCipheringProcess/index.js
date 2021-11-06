@@ -4,14 +4,11 @@ const createWriteStream = require("./processes/createWriteStream");
 const createTransformStream = require("./processes/createTransformStream");
 const runProcessPipeline = require("./processes/runProcessPipeline");
 
-const runCipheringProcess = (options, ciphersMap) => {
+const runCipheringProcess = (options) => {
   const { input, output, config } = options;
   const readStream = createReadStream(input);
   const writeStream = createWriteStream(output);
-  const cipheringArray = genCipheringArray(
-    config,
-    ciphersMap
-  );
+  const cipheringArray = genCipheringArray(config);
   const transformStreams = cipheringArray.map(
     createTransformStream
   );

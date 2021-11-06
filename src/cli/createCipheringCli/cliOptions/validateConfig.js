@@ -1,12 +1,13 @@
-const validateCipher = (ciphersMap) => (cipher) =>
+const ciphersMap = require("../config/ciphersMap");
+
+const validateCipher = (cipher) =>
   Object.keys(ciphersMap).includes(cipher);
 
-const validateConfig = (ciphersMap) => (config) => {
+const validateConfig = (config) => {
   const ciphers = config.split("-");
 
   return (
-    ciphers.length > 0 &&
-    ciphers.every(validateCipher(ciphersMap))
+    ciphers.length > 0 && ciphers.every(validateCipher)
   );
 };
 

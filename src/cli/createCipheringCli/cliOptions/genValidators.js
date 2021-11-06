@@ -34,9 +34,9 @@ const outputOptionValidators = () => [
   },
 ];
 
-const configOptionValidators = (ciphersMap) => [
+const configOptionValidators = () => [
   {
-    callback: validateConfig(ciphersMap),
+    callback: validateConfig,
     error: "Cipher config is invalid",
   },
 ];
