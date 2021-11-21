@@ -1,0 +1,26 @@
+{
+  "name": "ciphering-cli-tool",
+  "version": "1.0.0",
+  "description": "CLI tool for ciphering the data",
+  "main": "my_ciphering_cli.js",
+  "scripts": {
+    "dev": "node my_ciphering_cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popovdmitriiy/ciphering-cli-tool.git"
+  },
+  "author": "Dmitriy Popov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/popovdmitriiy/ciphering-cli-tool/issues"
+  },
+  "homepage": "https://github.com/popovdmitriiy/ciphering-cli-tool#readme",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
+}
