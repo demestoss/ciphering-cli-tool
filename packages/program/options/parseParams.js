@@ -2,7 +2,7 @@ const {
   tryCatch,
   processExitErrorHandler,
   throwError,
-} = require("../../utils/errorUtils");
+} = require("../../../src/utils/errorUtils");
 
 const genOptionName = (long, optionName) => {
   if (!optionName) {

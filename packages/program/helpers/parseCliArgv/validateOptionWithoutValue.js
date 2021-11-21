@@ -1,4 +1,6 @@
-const { throwError } = require("../../../utils/errorUtils");
+const {
+  throwError,
+} = require("../../../../src/utils/errorUtils");
 
 const validateOptionWithoutValue = (
   findedCliOption,

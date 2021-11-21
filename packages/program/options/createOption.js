@@ -1,5 +1,7 @@
 const parseParams = require("./parseParams");
-const { throwError } = require("../../utils/errorUtils");
+const {
+  throwError,
+} = require("../../../src/utils/errorUtils");
 
 const createOption = (params) => {
   const state = parseParams(params);

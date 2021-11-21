@@ -1,4 +1,6 @@
-const createProgram = require("../../program/createProgram");
+const {
+  createProgram,
+} = require("../../../packages/program");
 const genCipheringCliOptions = require("./cliOptions/genOptions");
 
 const createCipheringCli = () => {

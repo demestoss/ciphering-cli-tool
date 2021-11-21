@@ -1,4 +1,6 @@
-const { throwError } = require("../../../utils/errorUtils");
+const {
+  throwError,
+} = require("../../../../src/utils/errorUtils");
 
 const getFindedValue = (argv, finded) => {
   const idx = argv.findIndex((el) => el === finded[0]);

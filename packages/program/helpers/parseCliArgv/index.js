@@ -3,7 +3,7 @@ const {
   throwError,
   processExitErrorHandler,
   tryCatch,
-} = require("../../../utils/errorUtils");
+} = require("../../../../src/utils/errorUtils");
 
 const validateCliOptions = (argv, options) => {
   const allFlags = options.map((el) => el.flags()).flat();

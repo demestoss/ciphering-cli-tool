@@ -5,7 +5,7 @@ const {
   tryCatch,
   processExitErrorHandler,
   throwError,
-} = require("../../utils/errorUtils");
+} = require("../../../src/utils/errorUtils");
 
 const parseProgramParams = (params) => {
   const {

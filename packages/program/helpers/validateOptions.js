@@ -1,5 +1,9 @@
-const { hasDuplicates } = require("../../utils/arrayUtils");
-const { throwError } = require("../../utils/errorUtils");
+const {
+  hasDuplicates,
+} = require("../../../src/utils/arrayUtils");
+const {
+  throwError,
+} = require("../../../src/utils/errorUtils");
 
 const validateOptions = (options) => {
   const isValid = options.every(
